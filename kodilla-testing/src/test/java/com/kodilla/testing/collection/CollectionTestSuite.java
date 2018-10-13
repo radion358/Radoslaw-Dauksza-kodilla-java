@@ -35,7 +35,7 @@ public class CollectionTestSuite {
         OddNumbersExterminator numbersExterminator = new OddNumbersExterminator();
         //When
         List<Integer> result = numbersExterminator.exterminate(new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 6)));
-        List<Integer> expected = new ArrayList<Integer>(Arrays.asList(2, 4, 6));
+        List<Integer> expected = Arrays.asList(2, 4, 6);
         System.out.println("Testing normal list case");
         //Then
         Assert.assertEquals(expected, result);
