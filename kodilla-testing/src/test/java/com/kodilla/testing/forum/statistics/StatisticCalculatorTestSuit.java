@@ -32,23 +32,12 @@ public class StatisticCalculatorTestSuit {
         //Given
         int testNumberOfPosts = 0;
         int testNumberOfComments = 4;
-        double expectedAverageNumberOfCommentsPerPost = 0;
-        double expectedAverageNumberOfPostsPerUser = 0;
-        double expectedAverageNumberOfCommentsPerUser = 0;
         List<String> userNamesList = new ArrayList<>();
         userNamesList.add("abc");
         userNamesList.add("cab");
         int testNumberOfUsers = userNamesList.size();
         Statistics statisticMock = mock(Statistics.class);
         StatisticCalculator calculator = new StatisticCalculator();
-
-        if (testNumberOfPosts != 0) {
-            expectedAverageNumberOfCommentsPerPost = (double) testNumberOfComments / testNumberOfPosts;
-        }
-        if (testNumberOfUsers != 0) {
-            expectedAverageNumberOfPostsPerUser = (double) testNumberOfPosts / testNumberOfUsers;
-            expectedAverageNumberOfCommentsPerUser = (double) testNumberOfComments / testNumberOfUsers;
-        }
 
         when(statisticMock.usersNames()).thenReturn(userNamesList);
         when(statisticMock.postsCount()).thenReturn(testNumberOfPosts);
@@ -67,9 +56,9 @@ public class StatisticCalculatorTestSuit {
         Assert.assertEquals(testNumberOfUsers, numberOfUsers);
         Assert.assertEquals(testNumberOfPosts, numberOfPosts);
         Assert.assertEquals(testNumberOfComments, numberOfComment);
-        Assert.assertEquals(expectedAverageNumberOfCommentsPerUser, averageNumberOfCommentPerUser, 0.0001);
-        Assert.assertEquals(expectedAverageNumberOfPostsPerUser, averageNumberOfPostPerUser, 0.0001);
-        Assert.assertEquals(expectedAverageNumberOfCommentsPerPost, averageNumberOfCommentPerPost, 0.0001);
+        Assert.assertEquals(2, averageNumberOfCommentPerUser, 0.0001);
+        Assert.assertEquals(0, averageNumberOfPostPerUser, 0.0001);
+        Assert.assertEquals(0, averageNumberOfCommentPerPost, 0.0001);
     }
 
     @Test
@@ -77,23 +66,12 @@ public class StatisticCalculatorTestSuit {
         //Given
         int testNumberOfPosts = 1000;
         int testNumberOfComments = 4;
-        double expectedAverageNumberOfCommentsPerPost = 0;
-        double expectedAverageNumberOfPostsPerUser = 0;
-        double expectedAverageNumberOfCommentsPerUser = 0;
         List<String> userNamesList = new ArrayList<>();
         userNamesList.add("abc");
         userNamesList.add("cab");
         int testNumberOfUsers = userNamesList.size();
         Statistics statisticMock = mock(Statistics.class);
         StatisticCalculator calculator = new StatisticCalculator();
-
-        if (testNumberOfPosts != 0) {
-            expectedAverageNumberOfCommentsPerPost = (double) testNumberOfComments / testNumberOfPosts;
-        }
-        if (testNumberOfUsers != 0) {
-            expectedAverageNumberOfPostsPerUser = (double) testNumberOfPosts / testNumberOfUsers;
-            expectedAverageNumberOfCommentsPerUser = (double) testNumberOfComments / testNumberOfUsers;
-        }
 
         when(statisticMock.usersNames()).thenReturn(userNamesList);
         when(statisticMock.postsCount()).thenReturn(testNumberOfPosts);
@@ -112,9 +90,9 @@ public class StatisticCalculatorTestSuit {
         Assert.assertEquals(testNumberOfUsers, numberOfUsers);
         Assert.assertEquals(testNumberOfPosts, numberOfPosts);
         Assert.assertEquals(testNumberOfComments, numberOfComment);
-        Assert.assertEquals(expectedAverageNumberOfCommentsPerUser, averageNumberOfCommentPerUser, 0.0001);
-        Assert.assertEquals(expectedAverageNumberOfPostsPerUser, averageNumberOfPostPerUser, 0.0001);
-        Assert.assertEquals(expectedAverageNumberOfCommentsPerPost, averageNumberOfCommentPerPost, 0.0001);
+        Assert.assertEquals(2, averageNumberOfCommentPerUser, 0.0001);
+        Assert.assertEquals(500, averageNumberOfPostPerUser, 0.0001);
+        Assert.assertEquals(0.004, averageNumberOfCommentPerPost, 0.0001);
     }
 
     @Test
@@ -122,23 +100,12 @@ public class StatisticCalculatorTestSuit {
         //Given
         int testNumberOfPosts = 100;
         int testNumberOfComments = 0;
-        double expectedAverageNumberOfCommentsPerPost = 0;
-        double expectedAverageNumberOfPostsPerUser = 0;
-        double expectedAverageNumberOfCommentsPerUser = 0;
         List<String> userNamesList = new ArrayList<>();
         userNamesList.add("abc");
         userNamesList.add("cab");
         int testNumberOfUsers = userNamesList.size();
         Statistics statisticMock = mock(Statistics.class);
         StatisticCalculator calculator = new StatisticCalculator();
-
-        if (testNumberOfPosts != 0) {
-            expectedAverageNumberOfCommentsPerPost = (double) testNumberOfComments / testNumberOfPosts;
-        }
-        if (testNumberOfUsers != 0) {
-            expectedAverageNumberOfPostsPerUser = (double) testNumberOfPosts / testNumberOfUsers;
-            expectedAverageNumberOfCommentsPerUser = (double) testNumberOfComments / testNumberOfUsers;
-        }
 
         when(statisticMock.usersNames()).thenReturn(userNamesList);
         when(statisticMock.postsCount()).thenReturn(testNumberOfPosts);
@@ -157,9 +124,9 @@ public class StatisticCalculatorTestSuit {
         Assert.assertEquals(testNumberOfUsers, numberOfUsers);
         Assert.assertEquals(testNumberOfPosts, numberOfPosts);
         Assert.assertEquals(testNumberOfComments, numberOfComment);
-        Assert.assertEquals(expectedAverageNumberOfCommentsPerUser, averageNumberOfCommentPerUser, 0.0001);
-        Assert.assertEquals(expectedAverageNumberOfPostsPerUser, averageNumberOfPostPerUser, 0.0001);
-        Assert.assertEquals(expectedAverageNumberOfCommentsPerPost, averageNumberOfCommentPerPost, 0.0001);
+        Assert.assertEquals(0, averageNumberOfCommentPerUser, 0.0001);
+        Assert.assertEquals(50, averageNumberOfPostPerUser, 0.0001);
+        Assert.assertEquals(0, averageNumberOfCommentPerPost, 0.0001);
     }
 
     @Test
@@ -167,23 +134,12 @@ public class StatisticCalculatorTestSuit {
         //Given
         int testNumberOfPosts = 100;
         int testNumberOfComments = 50;
-        double expectedAverageNumberOfCommentsPerPost = 0;
-        double expectedAverageNumberOfPostsPerUser = 0;
-        double expectedAverageNumberOfCommentsPerUser = 0;
         List<String> userNamesList = new ArrayList<>();
         userNamesList.add("abc");
         userNamesList.add("cab");
         int testNumberOfUsers = userNamesList.size();
         Statistics statisticMock = mock(Statistics.class);
         StatisticCalculator calculator = new StatisticCalculator();
-
-        if (testNumberOfPosts != 0) {
-            expectedAverageNumberOfCommentsPerPost = (double) testNumberOfComments / testNumberOfPosts;
-        }
-        if (testNumberOfUsers != 0) {
-            expectedAverageNumberOfPostsPerUser = (double) testNumberOfPosts / testNumberOfUsers;
-            expectedAverageNumberOfCommentsPerUser = (double) testNumberOfComments / testNumberOfUsers;
-        }
 
         when(statisticMock.usersNames()).thenReturn(userNamesList);
         when(statisticMock.postsCount()).thenReturn(testNumberOfPosts);
@@ -202,9 +158,9 @@ public class StatisticCalculatorTestSuit {
         Assert.assertEquals(testNumberOfUsers, numberOfUsers);
         Assert.assertEquals(testNumberOfPosts, numberOfPosts);
         Assert.assertEquals(testNumberOfComments, numberOfComment);
-        Assert.assertEquals(expectedAverageNumberOfCommentsPerUser, averageNumberOfCommentPerUser, 0.0001);
-        Assert.assertEquals(expectedAverageNumberOfPostsPerUser, averageNumberOfPostPerUser, 0.0001);
-        Assert.assertEquals(expectedAverageNumberOfCommentsPerPost, averageNumberOfCommentPerPost, 0.0001);
+        Assert.assertEquals(25, averageNumberOfCommentPerUser, 0.0001);
+        Assert.assertEquals(50, averageNumberOfPostPerUser, 0.0001);
+        Assert.assertEquals(0.5, averageNumberOfCommentPerPost, 0.0001);
     }
 
     @Test
@@ -212,9 +168,6 @@ public class StatisticCalculatorTestSuit {
         //Given
         int testNumberOfPosts = 100;
         int testNumberOfComments = 300;
-        double expectedAverageNumberOfCommentsPerPost = 0;
-        double expectedAverageNumberOfPostsPerUser = 0;
-        double expectedAverageNumberOfCommentsPerUser = 0;
         List<String> userNamesList = new ArrayList<>();
         userNamesList.add("abc");
         userNamesList.add("cab");
@@ -222,14 +175,6 @@ public class StatisticCalculatorTestSuit {
         Statistics statisticMock = mock(Statistics.class);
         StatisticCalculator calculator = new StatisticCalculator();
 
-        if (testNumberOfPosts != 0) {
-            expectedAverageNumberOfCommentsPerPost = (double) testNumberOfComments / testNumberOfPosts;
-        }
-        if (testNumberOfUsers != 0) {
-            expectedAverageNumberOfPostsPerUser = (double) testNumberOfPosts / testNumberOfUsers;
-            expectedAverageNumberOfCommentsPerUser = (double) testNumberOfComments / testNumberOfUsers;
-        }
-
         when(statisticMock.usersNames()).thenReturn(userNamesList);
         when(statisticMock.postsCount()).thenReturn(testNumberOfPosts);
         when(statisticMock.commentsCount()).thenReturn(testNumberOfComments);
@@ -247,9 +192,9 @@ public class StatisticCalculatorTestSuit {
         Assert.assertEquals(testNumberOfUsers, numberOfUsers);
         Assert.assertEquals(testNumberOfPosts, numberOfPosts);
         Assert.assertEquals(testNumberOfComments, numberOfComment);
-        Assert.assertEquals(expectedAverageNumberOfCommentsPerUser, averageNumberOfCommentPerUser, 0.0001);
-        Assert.assertEquals(expectedAverageNumberOfPostsPerUser, averageNumberOfPostPerUser, 0.0001);
-        Assert.assertEquals(expectedAverageNumberOfCommentsPerPost, averageNumberOfCommentPerPost, 0.0001);
+        Assert.assertEquals(150, averageNumberOfCommentPerUser, 0.0001);
+        Assert.assertEquals(50, averageNumberOfPostPerUser, 0.0001);
+        Assert.assertEquals(3, averageNumberOfCommentPerPost, 0.0001);
     }
 
     @Test
@@ -257,21 +202,10 @@ public class StatisticCalculatorTestSuit {
         //Given
         int testNumberOfPosts = 100;
         int testNumberOfComments = 4;
-        double expectedAverageNumberOfCommentsPerPost = 0;
-        double expectedAverageNumberOfPostsPerUser = 0;
-        double expectedAverageNumberOfCommentsPerUser = 0;
         List<String> userNamesList = new ArrayList<>();
         int testNumberOfUsers = userNamesList.size();
         Statistics statisticMock = mock(Statistics.class);
         StatisticCalculator calculator = new StatisticCalculator();
-
-        if (testNumberOfPosts != 0) {
-            expectedAverageNumberOfCommentsPerPost = (double) testNumberOfComments / testNumberOfPosts;
-        }
-        if (testNumberOfUsers != 0) {
-            expectedAverageNumberOfPostsPerUser = (double) testNumberOfPosts / testNumberOfUsers;
-            expectedAverageNumberOfCommentsPerUser = (double) testNumberOfComments / testNumberOfUsers;
-        }
 
         when(statisticMock.usersNames()).thenReturn(userNamesList);
         when(statisticMock.postsCount()).thenReturn(testNumberOfPosts);
@@ -290,9 +224,9 @@ public class StatisticCalculatorTestSuit {
         Assert.assertEquals(testNumberOfUsers, numberOfUsers);
         Assert.assertEquals(testNumberOfPosts, numberOfPosts);
         Assert.assertEquals(testNumberOfComments, numberOfComment);
-        Assert.assertEquals(expectedAverageNumberOfCommentsPerUser, averageNumberOfCommentPerUser, 0.0001);
-        Assert.assertEquals(expectedAverageNumberOfPostsPerUser, averageNumberOfPostPerUser, 0.0001);
-        Assert.assertEquals(expectedAverageNumberOfCommentsPerPost, averageNumberOfCommentPerPost, 0.0001);
+        Assert.assertEquals(0, averageNumberOfCommentPerUser, 0.0001);
+        Assert.assertEquals(0, averageNumberOfPostPerUser, 0.0001);
+        Assert.assertEquals(0.04, averageNumberOfCommentPerPost, 0.0001);
     }
 
     @Test
@@ -300,9 +234,6 @@ public class StatisticCalculatorTestSuit {
         //Given
         int testNumberOfPosts = 100;
         int testNumberOfComments = 4;
-        double expectedAverageNumberOfCommentsPerPost = 0;
-        double expectedAverageNumberOfPostsPerUser = 0;
-        double expectedAverageNumberOfCommentsPerUser = 0;
         List<String> list = new ArrayList<>();
         List<String> spyList = Mockito.spy(list);
 
@@ -310,14 +241,6 @@ public class StatisticCalculatorTestSuit {
         int testNumberOfUsers = spyList.size();
         Statistics statisticMock = mock(Statistics.class);
         StatisticCalculator calculator = new StatisticCalculator();
-
-        if (testNumberOfPosts != 0) {
-            expectedAverageNumberOfCommentsPerPost = (double) testNumberOfComments / testNumberOfPosts;
-        }
-        if (testNumberOfUsers != 0) {
-            expectedAverageNumberOfPostsPerUser = (double) testNumberOfPosts / testNumberOfUsers;
-            expectedAverageNumberOfCommentsPerUser = (double) testNumberOfComments / testNumberOfUsers;
-        }
 
         when(statisticMock.usersNames()).thenReturn(spyList);
         when(statisticMock.postsCount()).thenReturn(testNumberOfPosts);
@@ -336,8 +259,8 @@ public class StatisticCalculatorTestSuit {
         Assert.assertEquals(testNumberOfUsers, numberOfUsers);
         Assert.assertEquals(testNumberOfPosts, numberOfPosts);
         Assert.assertEquals(testNumberOfComments, numberOfComment);
-        Assert.assertEquals(expectedAverageNumberOfCommentsPerUser, averageNumberOfCommentPerUser, 0.0001);
-        Assert.assertEquals(expectedAverageNumberOfPostsPerUser, averageNumberOfPostPerUser, 0.0001);
-        Assert.assertEquals(expectedAverageNumberOfCommentsPerPost, averageNumberOfCommentPerPost, 0.0001);
+        Assert.assertEquals(0.04, averageNumberOfCommentPerUser, 0.0001);
+        Assert.assertEquals(1, averageNumberOfPostPerUser, 0.0001);
+        Assert.assertEquals(0.04, averageNumberOfCommentPerPost, 0.0001);
     }
 }
