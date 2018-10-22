@@ -16,13 +16,13 @@ public class WorldTestSuite {
         countriesInEurope.add(new Country(new BigInteger("1234567890")));
 
         List<Country> countriesInAsia = new ArrayList<>();
-        countriesInEurope.add(new Country(new BigInteger("1234567890")));
-        countriesInEurope.add(new Country(new BigInteger("1234567890")));
-        countriesInEurope.add(new Country(new BigInteger("1234567890")));
+        countriesInAsia.add(new Country(new BigInteger("1234567890")));
+        countriesInAsia.add(new Country(new BigInteger("1234567890")));
+        countriesInAsia.add(new Country(new BigInteger("1234567890")));
 
         List<Country> countriesInAfrica = new ArrayList<>();
-        countriesInEurope.add(new Country(new BigInteger("1234567890")));
-        countriesInEurope.add(new Country(new BigInteger("1234567890")));
+        countriesInAfrica.add(new Country(new BigInteger("1234567890")));
+        countriesInAfrica.add(new Country(new BigInteger("1234567890")));
 
 
         Continent europe = new Continent(countriesInEurope);
