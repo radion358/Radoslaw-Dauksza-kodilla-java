@@ -22,7 +22,6 @@ public class FirstChallenge {
         try {
             result = firstChallenge.divide(3, 0);
         } catch (ArithmeticException e) {
-            result = -1;
             System.out.println("You are trying to divide by 0!" + " " + e);
         } finally {
             System.out.println(result);
