@@ -12,7 +12,7 @@ class Paper implements Move {
     }
 
     @Override
-    public String getMoveName(){
+    public String getMoveName() {
 
         return "paper";
     }

@@ -3,7 +3,7 @@ package com.kodilla.rsp;
 import java.util.ArrayList;
 import java.util.List;
 
-class Scissors implements Move{
+class Scissors implements Move {
     private final List<String> losesWith = new ArrayList<>();
 
     Scissors() {
@@ -12,7 +12,7 @@ class Scissors implements Move{
     }
 
     @Override
-    public String getMoveName(){
+    public String getMoveName() {
 
         return "scissors";
     }

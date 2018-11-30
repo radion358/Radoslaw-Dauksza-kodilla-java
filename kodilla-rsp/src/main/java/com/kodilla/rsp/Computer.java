@@ -4,7 +4,7 @@ import java.util.List;
 
 class Computer {
     static String calculateComputerMove (Game game, boolean playerLoses,
-                                       Move playerMove , List<String> moves){
+                                       Move playerMove , List<String> moves) {
         String computerMove;
         List<String> availableMove = playerMove.getLosesWith();
         if(playerLoses){

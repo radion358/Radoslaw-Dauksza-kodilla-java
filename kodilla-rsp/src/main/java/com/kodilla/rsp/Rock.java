@@ -3,7 +3,7 @@ package com.kodilla.rsp;
 import java.util.ArrayList;
 import java.util.List;
 
-class Rock implements Move{
+class Rock implements Move {
     private final List<String> losesWith = new ArrayList<>();
 
     Rock() {

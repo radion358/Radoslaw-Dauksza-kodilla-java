@@ -12,7 +12,7 @@ class Lizard implements Move {
     }
 
     @Override
-    public String getMoveName(){
+    public String getMoveName() {
 
         return "lizard";
     }

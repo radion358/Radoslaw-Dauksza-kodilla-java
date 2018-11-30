@@ -3,7 +3,7 @@ package com.kodilla.rsp;
 import java.util.ArrayList;
 import java.util.List;
 
-class Spock implements Move{
+class Spock implements Move {
     private final List<String> losesWith = new ArrayList<>();
 
     Spock() {
@@ -12,7 +12,7 @@ class Spock implements Move{
     }
 
     @Override
-    public String getMoveName(){
+    public String getMoveName() {
 
         return "spock";
     }
