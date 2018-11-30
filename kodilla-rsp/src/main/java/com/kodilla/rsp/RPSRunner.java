@@ -2,7 +2,7 @@ package com.kodilla.rsp;
 
 import java.util.Scanner;
 
-public class RPSRunner {
+class RPSRunner {
     public static void main(String[] args) {
         boolean end = false;
         int howManyRounds = 0;
@@ -13,8 +13,8 @@ public class RPSRunner {
             System.out.println("specify how many rounds would like to play");
             howManyRounds = getHowManyRounds(howManyRounds, scanner);
 
-            boolean menuIsRuning = true;
-            while(menuIsRuning){
+            boolean menuIsRunning = true;
+            while(menuIsRunning){
                 System.out.println("select game");
                 System.out.println("rock, paper, scissors, choose 1 and pres enter");
                 System.out.println("rock, paper, scissors, lizard, spock, choose 2 and pres enter");
@@ -31,7 +31,8 @@ public class RPSRunner {
                         break;
                     case "2":
                         System.out.println("2");
-
+                        RPSLSGame rpslsGame = new RPSLSGame(player, scanner);
+                        rpslsGame.run(howManyRounds);
                         break;
                     case "3":
                         System.out.println("enter player name");
@@ -44,6 +45,7 @@ public class RPSRunner {
                     case "x":
                         if (Exit.confirm(scanner)) {
                             scanner.close();
+
                             return;
                         }else {
                             break;
@@ -64,7 +66,7 @@ public class RPSRunner {
                 howManyRounds = Integer.parseInt(scanner.nextLine());
                 incorrectInt = false;
             } catch (NumberFormatException e) {
-                System.out.println("podaj liczbę");
+                System.out.println("give a number");
             }
         }
         return howManyRounds;

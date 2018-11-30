@@ -3,10 +3,10 @@ package com.kodilla.rsp;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Paper implements Move {
+class Paper implements Move {
     private final List<String> losesWith = new ArrayList<>();
 
-    public Paper() {
+    Paper() {
         this.losesWith.add("scissors");
         this.losesWith.add("lizard");
     }
@@ -19,7 +19,7 @@ public class Paper implements Move {
 
     @Override
     public List<String> getLosesWith() {
-        return losesWith;
+        return new ArrayList<>(losesWith);
     }
 
     @Override
