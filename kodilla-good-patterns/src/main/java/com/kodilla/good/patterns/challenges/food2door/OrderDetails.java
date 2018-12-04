@@ -1,27 +1,23 @@
 package com.kodilla.good.patterns.challenges.food2door;
 
+import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.Map;
+
 public class OrderDetails {
-    private Deliverer deliverer;
-    private double quantity;
-    private Product product;
+    private Map<Product, Integer> productsToOrder;
+    private LocalDate orderDate;
 
-    public OrderDetails(Deliverer deliverer, double quantity, Product product) {
-        this.deliverer = deliverer;
-        this.quantity = quantity;
-        this.product = product;
+    public OrderDetails(final Map<Product, Integer> productsToOrder, final LocalDate orderDate) {
+        this.productsToOrder = productsToOrder;
+        this.orderDate = orderDate;
     }
 
-    public Deliverer getDeliverer() {
-        return deliverer;
+    public Map<Product, Integer> getProductsToOrder() {
+        return new HashMap<Product, Integer>(productsToOrder);
     }
 
-    public double getQuantity() {
-        return quantity;
+    public LocalDate getOrderDate() {
+        return orderDate;
     }
-
-    public Product getProduct() {
-        return product;
-    }
-    
-    
 }
