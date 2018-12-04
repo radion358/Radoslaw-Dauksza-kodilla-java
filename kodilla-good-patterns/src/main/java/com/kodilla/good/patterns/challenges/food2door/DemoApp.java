@@ -32,7 +32,9 @@ public class DemoApp {
         OrderDetails healthyOrder = OrderGenerator.generateOrder(healthyShop, food2Door);
 
         extraFoodShop.process(extraFoodOrder);
+        System.out.println();
         glutenFreeShop.process(glutenFreeOrder);
+        System.out.println();
         healthyShop.process(healthyOrder);
     }
 }
