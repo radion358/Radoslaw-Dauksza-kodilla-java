@@ -8,8 +8,11 @@ public class DemoApp {
         Flight flightWithTransfer = Generator.generateFlightWithTransfer();
 
         flightCompany.searchFlight(directFlight).forEach(System.out::println);
+        System.out.println();
         flightCompany.searchFlight(flightWithTransfer).forEach(System.out::println);
-       flightCompany.searchFlightByArrivalDestination("Rzeszów Jasionka").forEach(System.out::println);
+        System.out.println();
+        flightCompany.searchFlightByArrivalDestination("Rzeszów Jasionka").forEach(System.out::println);
+        System.out.println();
         flightCompany.searchFlightByDepartureDestination("Warszawa Okęcie").forEach(System.out::println);
     }
 }

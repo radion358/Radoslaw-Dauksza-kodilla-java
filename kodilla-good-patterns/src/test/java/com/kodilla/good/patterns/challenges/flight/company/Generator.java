@@ -3,7 +3,7 @@ package com.kodilla.good.patterns.challenges.flight.company;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Generator {
+class Generator {
     static FlightCompany generateFlightCompany() {
         List<Flight> flights = new ArrayList<>();
         flights.add(new Flight("Warszawa Okęcie", "Modlin"));
