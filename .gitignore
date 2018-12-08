@@ -24,3 +24,7 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+/kodilla-good-patterns/build/
+/kodilla-rsp/build/
+/kodilla-exception/build/
+/kodilla-spring/build/
