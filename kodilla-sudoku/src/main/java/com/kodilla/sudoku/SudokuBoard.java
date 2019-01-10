@@ -12,6 +12,24 @@ public class SudokuBoard {
         }
     }
 
+    void setElementValue(int columnIndex, int rowIndex, int value) {
+        if (sudokuRows.get(columnIndex).getElementPossibleValue(rowIndex).contains(value)) {
+            sudokuRows.get(columnIndex).setElementValue(rowIndex, value);
+            deletePossibleValueInColumn(columnIndex, value);
+            deletePossibleValueInBlock(columnIndex, rowIndex, value);
+        }
+    }
+
+    private void deletePossibleValueInColumn(int columnIndex, int value) {
+        for (SudokuRow row : sudokuRows) {
+            row.deletePossibleValueInElement(columnIndex, value);
+        }
+    }
+
+    private void deletePossibleValueInBlock(int columnIndex, int rowIndex, int value) {
+
+    }
+
     @Override
     public String toString() {
         StringBuilder board = new StringBuilder("     1     2     3     4     5     6     7     8     9\n");
