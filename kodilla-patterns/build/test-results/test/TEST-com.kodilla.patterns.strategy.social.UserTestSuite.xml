@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.patterns.strategy.social.UserTestSuite" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-01-11T17:48:09" hostname="DESKTOP-QC6JLUN" time="0.003">
+  <properties/>
+  <testcase name="testDefaultSharingStrategies" classname="com.kodilla.patterns.strategy.social.UserTestSuite" time="0.002"/>
+  <testcase name="testIndividualSharingStrategy" classname="com.kodilla.patterns.strategy.social.UserTestSuite" time="0.001"/>
+  <system-out><![CDATA[[ Roger post on twitter ]
+something milenial
+[ George post on facebook ]
+something yyy
+[ Steven post on snapchat ]
+something zzz
+
+[ Roger post on facebook ]
+something milenial
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

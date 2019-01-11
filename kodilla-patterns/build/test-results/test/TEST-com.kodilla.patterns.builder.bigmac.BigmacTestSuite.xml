@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.patterns.builder.bigmac.BigmacTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-01-11T17:48:08" hostname="DESKTOP-QC6JLUN" time="0.005">
+  <properties/>
+  <testcase name="testBigmacBuilder" classname="com.kodilla.patterns.builder.bigmac.BigmacTestSuite" time="0.005"/>
+  <system-out><![CDATA[number of burgers must be greater than -1 and les than 3
+number of burgers must be greater than -1 and les than 3
+Bigmac{bun='bun with sesame seeds', burgers=2, sauce='ketchup', ingredients=[cheese, onion, salad, tomato]}
+Bigmac{bun='bun with sesame seeds', burgers=1, sauce='mayonnaise', ingredients=[cheese, onion]}
+Bigmac{bun='bun without sesame seeds', burgers=1, sauce='ketchup', ingredients=[cheese, onion, salad]}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

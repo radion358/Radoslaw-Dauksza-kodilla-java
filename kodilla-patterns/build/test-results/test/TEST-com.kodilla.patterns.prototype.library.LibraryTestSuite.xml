@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.patterns.prototype.library.LibraryTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-01-11T17:48:08" hostname="DESKTOP-QC6JLUN" time="0.04">
+  <properties/>
+  <testcase name="testToString" classname="com.kodilla.patterns.prototype.library.LibraryTestSuite" time="0.04"/>
+  <system-out><![CDATA[Books in [1st Library]
+    Book{title='book 6', author='author 6', publicationDate=2013-01-11}
+    Book{title='book 3', author='author 3', publicationDate=2016-01-11}
+    Book{title='book 1', author='author 1', publicationDate=2018-01-11}
+    Book{title='book 4', author='author 4', publicationDate=2015-01-11}
+    Book{title='book 5', author='author 5', publicationDate=2014-01-11}
+    Book{title='book 2', author='author 2', publicationDate=2017-01-11}
+    Book{title='book 8', author='author 8', publicationDate=2011-01-11}
+    Book{title='book 0', author='author 0', publicationDate=2019-01-11}
+    Book{title='book 9', author='author 9', publicationDate=2010-01-11}
+    Book{title='book 7', author='author 7', publicationDate=2012-01-11}
+Books in [2nd Library]
+    Book{title='book 6', author='author 6', publicationDate=2013-01-11}
+    Book{title='book 3', author='author 3', publicationDate=2016-01-11}
+    Book{title='book 1', author='author 1', publicationDate=2018-01-11}
+    Book{title='book 4', author='author 4', publicationDate=2015-01-11}
+    Book{title='book 5', author='author 5', publicationDate=2014-01-11}
+    Book{title='book 2', author='author 2', publicationDate=2017-01-11}
+    Book{title='book 8', author='author 8', publicationDate=2011-01-11}
+    Book{title='book 0', author='author 0', publicationDate=2019-01-11}
+    Book{title='book 9', author='author 9', publicationDate=2010-01-11}
+    Book{title='book 7', author='author 7', publicationDate=2012-01-11}
+Books in [3rd Library]
+    Book{title='book 7', author='author 7', publicationDate=2012-01-11}
+    Book{title='book 8', author='author 8', publicationDate=2011-01-11}
+    Book{title='book 1', author='author 1', publicationDate=2018-01-11}
+    Book{title='ABC', author='DEF', publicationDate=2019-01-11}
+    Book{title='book 6', author='author 6', publicationDate=2013-01-11}
+    Book{title='book 9', author='author 9', publicationDate=2010-01-11}
+    Book{title='book 0', author='author 0', publicationDate=2019-01-11}
+    Book{title='book 3', author='author 3', publicationDate=2016-01-11}
+    Book{title='book 4', author='author 4', publicationDate=2015-01-11}
+    Book{title='book 5', author='author 5', publicationDate=2014-01-11}
+    Book{title='book 2', author='author 2', publicationDate=2017-01-11}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
