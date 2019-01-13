@@ -1,8 +1,6 @@
 package com.kodilla.hibernate.invoice.dao;
 
-import com.kodilla.hibernate.invoice.Invoice;
-import com.kodilla.hibernate.invoice.Item;
-import com.kodilla.hibernate.invoice.Product;
+import com.kodilla.hibernate.invoice.*;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
