@@ -14,14 +14,13 @@ class SudokuRow {
     }
     void setElementValue(int index, int value) {
         sudokuElements.get(index).setValue(value);
-        deletePossibleValueInRow(value);
     }
 
     Set<Integer> getElementPossibleValue(int index) {
         return sudokuElements.get(index).getPossibleValue();
     }
 
-    private void deletePossibleValueInRow(int value) {
+    void deletePossibleValueInRow(int value) {
         for (SudokuElement element: sudokuElements) {
             element.deletePossibleValue(value);
         }
@@ -32,6 +31,6 @@ class SudokuRow {
     }
 
     List<SudokuElement> getSudokuElements() {
-        return new ArrayList<>(sudokuElements);
+        return sudokuElements;
     }
 }

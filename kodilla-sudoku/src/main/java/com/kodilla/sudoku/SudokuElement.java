@@ -22,8 +22,6 @@ class SudokuElement {
     }
 
     void setValue(int value) {
-        if (possibleValue.contains(value)) {
-            this.value = value;
-        }
+        this.value = value;
     }
 }
