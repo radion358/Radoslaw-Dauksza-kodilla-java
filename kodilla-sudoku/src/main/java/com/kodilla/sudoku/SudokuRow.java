@@ -4,8 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-class SudokuRow {
-    private final List<SudokuElement> sudokuElements = new ArrayList<>();
+class SudokuRow implements Cloneable {
+    private List<SudokuElement> sudokuElements = new ArrayList<>();
+
+    public SudokuRow deepCopy() throws CloneNotSupportedException {
+        SudokuRow copyOfSudokuRow = (SudokuRow)super.clone();
+        copyOfSudokuRow.sudokuElements = new ArrayList<>();
+        for (SudokuElement element: sudokuElements) {
+            copyOfSudokuRow.sudokuElements.add(element.deepCopy());
+        }
+        return copyOfSudokuRow;
+    }
 
     SudokuRow() {
         for (int i = 0; i < 9; i++) {

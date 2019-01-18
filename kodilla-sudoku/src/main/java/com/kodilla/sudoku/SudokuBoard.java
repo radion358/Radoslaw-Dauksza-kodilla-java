@@ -3,18 +3,40 @@ package com.kodilla.sudoku;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SudokuBoard {
-    private final List<SudokuRow> sudokuRows = new ArrayList<>();
-    private final List<SudokuElement> block1 = new ArrayList<>();
-    private final List<SudokuElement> block2 = new ArrayList<>();
-    private final List<SudokuElement> block3 = new ArrayList<>();
-    private final List<SudokuElement> block4 = new ArrayList<>();
-    private final List<SudokuElement> block5 = new ArrayList<>();
-    private final List<SudokuElement> block6 = new ArrayList<>();
-    private final List<SudokuElement> block7 = new ArrayList<>();
-    private final List<SudokuElement> block8 = new ArrayList<>();
-    private final List<SudokuElement> block9 = new ArrayList<>();
+public class SudokuBoard implements Cloneable {
+    private List<SudokuRow> sudokuRows = new ArrayList<>();
+    private List<SudokuElement> block1 = new ArrayList<>();
+    private List<SudokuElement> block2 = new ArrayList<>();
+    private List<SudokuElement> block3 = new ArrayList<>();
+    private List<SudokuElement> block4 = new ArrayList<>();
+    private List<SudokuElement> block5 = new ArrayList<>();
+    private List<SudokuElement> block6 = new ArrayList<>();
+    private List<SudokuElement> block7 = new ArrayList<>();
+    private List<SudokuElement> block8 = new ArrayList<>();
+    private List<SudokuElement> block9 = new ArrayList<>();
 
+    List<SudokuRow> getSudokuRows() {
+        return sudokuRows;
+    }
+
+    public SudokuBoard deepCopy() throws CloneNotSupportedException {
+        SudokuBoard copyOfSudokuBoard = (SudokuBoard)super.clone();
+        copyOfSudokuBoard.sudokuRows = new ArrayList<>();
+        copyOfSudokuBoard.block1 = new ArrayList<>();
+        copyOfSudokuBoard.block2 = new ArrayList<>();
+        copyOfSudokuBoard.block3 = new ArrayList<>();
+        copyOfSudokuBoard.block4 = new ArrayList<>();
+        copyOfSudokuBoard.block5 = new ArrayList<>();
+        copyOfSudokuBoard.block6 = new ArrayList<>();
+        copyOfSudokuBoard.block7 = new ArrayList<>();
+        copyOfSudokuBoard.block8 = new ArrayList<>();
+        copyOfSudokuBoard.block9 = new ArrayList<>();
+        for (SudokuRow sudokuRow: sudokuRows) {
+            copyOfSudokuBoard.sudokuRows.add(sudokuRow.deepCopy());
+        }
+        copyOfSudokuBoard.fillBlocks();
+        return copyOfSudokuBoard;
+    }
     SudokuBoard() {
         for (int i = 0; i < 9; i++) {
             this.sudokuRows.add(new SudokuRow());
@@ -24,14 +46,10 @@ public class SudokuBoard {
 
     void setElementValue(int columnIndex, int rowIndex, int value) {
         if (sudokuRows.get(rowIndex).getElementPossibleValue(columnIndex).contains(value)) {
-            try {
-                deletePossibleValueInBlock(whichBlock(rowIndex, columnIndex) , value);
-                deletePossibleValueInColumn(columnIndex, value);
-                sudokuRows.get(rowIndex).deletePossibleValueInRow(value);
-                sudokuRows.get(rowIndex).setElementValue(columnIndex, value);
-            } catch (NullPointerException e) {
-                e.printStackTrace();
-            }
+            deletePossibleValueInBlock(whichBlock(rowIndex, columnIndex) , value);
+            deletePossibleValueInColumn(columnIndex, value);
+            sudokuRows.get(rowIndex).deletePossibleValueInRow(value);
+            sudokuRows.get(rowIndex).setElementValue(columnIndex, value);
         }
     }
 
@@ -47,7 +65,7 @@ public class SudokuBoard {
         }
     }
 
-    private void fillBlocks() {
+    void fillBlocks() {
         for (int x = 0; x < 3; x++) {
             for (int y = 0; y < 3; y++) {
                 block1.add(sudokuRows.get(x).getSudokuElements().get(y));
