@@ -10,6 +10,11 @@ import java.util.List;
         query = "SELECT * FROM companies WHERE company_name LIKE CONCAT(:STARTINGWITH, '%')",
         resultClass = Company.class
 )
+
+@NamedQuery(name = "Company.retrieveCompaniesWithNameContaining",
+        query = "FROM Company WHERE company_name LIKE CONCAT('%', :ARG, '%')"
+)
+
 @Entity
 @Table(name = "COMPANIES")
 public class Company {

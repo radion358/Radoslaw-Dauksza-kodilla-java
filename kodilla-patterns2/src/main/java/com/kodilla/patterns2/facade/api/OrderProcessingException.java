@@ -4,8 +4,8 @@ public class OrderProcessingException extends Exception {
 
     public static String ERR_NOT_AUTHORISED = "User is not authorised";
     public static String ERR_PAYMENT_REJECTED = "Payment was rejected";
-    public static String ERR_VERYFICATION_ERROR = "Verification error";
-    public static String ERR_SUBMITION_ERRPR = "Cannot submit order";
+    public static String ERR_VERIFICATION_ERROR = "Verification error";
+    public static String ERR_SUBMISSION_ERROR = "Cannot submit order";
 
     public OrderProcessingException(String message) {
         super(message);

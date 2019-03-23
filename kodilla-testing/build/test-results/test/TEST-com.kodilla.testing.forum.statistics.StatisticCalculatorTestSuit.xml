@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" tests="7" skipped="0" failures="0" errors="0" timestamp="2018-10-20T19:23:09" hostname="DESKTOP-QC6JLUN" time="0.432">
+<testsuite name="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-03-23T01:28:44" hostname="DESKTOP-QC6JLUN" time="0.437">
   <properties/>
-  <testcase name="calculateAdvStatisticsTestCaseLessCommentThanPost" classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.307"/>
+  <testcase name="calculateAdvStatisticsTestCaseLessCommentThanPost" classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.315"/>
   <testcase name="calculateAdvStatisticsTestCase0Users" classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.001"/>
   <testcase name="calculateAdvStatisticsTestCase0Comment" classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.001"/>
-  <testcase name="calculateAdvStatisticsTestCase1000Post" classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.001"/>
-  <testcase name="calculateAdvStatisticsTestCase100Users" classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.121"/>
-  <testcase name="calculateAdvStatisticsTestCase0Post" classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.0"/>
-  <testcase name="calculateAdvStatisticsTestCaseMoreCommentThanPost" classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.0"/>
+  <testcase name="calculateAdvStatisticsTestCase1000Post" classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.0"/>
+  <testcase name="calculateAdvStatisticsTestCase100Users" classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.118"/>
+  <testcase name="calculateAdvStatisticsTestCase0Post" classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.001"/>
+  <testcase name="calculateAdvStatisticsTestCaseMoreCommentThanPost" classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.001"/>
   <system-out><![CDATA[This is the beginning of tests.
 Preparing to execute test #1
 Preparing to execute test #2

@@ -38,15 +38,15 @@ public final class OrderFacade {
             }
             LOGGER.info("Payment for order was done");
             if (!shopService.verifyOrder(orderId)) {
-                LOGGER.error(OrderProcessingException.ERR_VERYFICATION_ERROR);
+                LOGGER.error(OrderProcessingException.ERR_VERIFICATION_ERROR);
                 wasError = true;
-                throw new OrderProcessingException(OrderProcessingException.ERR_VERYFICATION_ERROR);
+                throw new OrderProcessingException(OrderProcessingException.ERR_VERIFICATION_ERROR);
             }
             LOGGER.info("Order is ready to submit");
             if (!shopService.submitOrder(orderId)) {
-                LOGGER.error(OrderProcessingException.ERR_SUBMITION_ERRPR);
+                LOGGER.error(OrderProcessingException.ERR_SUBMISSION_ERROR);
                 wasError = true;
-                throw new OrderProcessingException(OrderProcessingException.ERR_SUBMITION_ERRPR);
+                throw new OrderProcessingException(OrderProcessingException.ERR_SUBMISSION_ERROR);
             }
             LOGGER.info("Order " + orderId + " submitted");
         } finally {
