@@ -1,6 +1,15 @@
 .gradle
 /build/
 !gradle/wrapper/gradle-wrapper.jar
+/kodilla-good-patterns/build/
+/kodilla-rsp/build/
+/kodilla-exception/build/
+/kodilla-spring/build/
+/kodilla-jdbc/build/
+/kodilla-testing2/out/
+/kodilla-hibernate/build/
+/kodilla-patterns/build/
+/kodilla-spring-intro/build/
 
 ### STS ###
 .apt_generated
@@ -24,9 +33,3 @@
 /dist/
 /nbdist/
 /.nb-gradle/
-/kodilla-good-patterns/build/
-/kodilla-rsp/build/
-/kodilla-exception/build/
-/kodilla-spring/build/
-/kodilla-jdbc/build/
-kodilla-testing2/out

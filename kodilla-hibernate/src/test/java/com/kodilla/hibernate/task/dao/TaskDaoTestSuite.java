@@ -29,11 +29,11 @@ public class TaskDaoTestSuite {
 
         //Then
         int id = task.getId();
-        Task readTask = taskDao.findOne(id);
+        Task readTask = taskDao.findById(id).get();
         Assert.assertEquals(id, readTask.getId());
 
         //CleanUp
-        taskDao.delete(id);
+        taskDao.deleteById(id);
     }
 
     @Test
@@ -51,7 +51,7 @@ public class TaskDaoTestSuite {
 
         //CleanUp
         int id = readTasks.get(0).getId();
-        taskDao.delete(id);
+        taskDao.deleteById(id);
     }
 
     @Test
@@ -68,6 +68,6 @@ public class TaskDaoTestSuite {
         Assert.assertNotEquals(0, id);
 
         //CleanUp
-        taskDao.delete(id);
+        taskDao.deleteById(id);
     }
 }

@@ -37,6 +37,7 @@ public class DbManagerTestSuite {
         }
         rs.close();
         statement.close();
+        //TODO Dropped table. Need to fill with test data
 //        Assert.assertEquals(5, counter);
     }
 
