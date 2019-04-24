@@ -45,9 +45,9 @@ public class CrudAppTestSuite {
         content.sendKeys(taskContent);
 
         WebElement addButton = driver.findElement(By.xpath(XPATH_ADD_BUTTON));
+        Thread.sleep(2000);
         addButton.click();
         Thread.sleep(2000);
-
         return taskName;
     }
 
@@ -69,7 +69,7 @@ public class CrudAppTestSuite {
                             theForm.findElement(By.xpath(".//button[contains(@class, \"card-creation\")]"));
                     buttonCreateCard.click();
                 });
-        Thread.sleep(5000);
+        Thread.sleep(2000);
     }
 
     private boolean checkTaskExistInTrello(String taskName) throws InterruptedException {
@@ -99,8 +99,8 @@ public class CrudAppTestSuite {
         return result;
     }
 
-    private void deleteTaskFromCrudApp(String taskName) {
-        driver.navigate().refresh();
+    private void deleteTaskFromCrudApp (String taskName) {
+        driver.switchTo().alert().accept();
 
         while (!driver.findElement(By.xpath("//select[1]")).isDisplayed()) ;
 
@@ -119,7 +119,7 @@ public class CrudAppTestSuite {
     public void shouldCreateTrelloCard() throws InterruptedException {
         String taskName = createCrudAppTestTask();
         sendTestTaskToTrello(taskName);
-        assertTrue(checkTaskExistInTrello(taskName));
         deleteTaskFromCrudApp(taskName);
+        assertTrue(checkTaskExistInTrello(taskName));
     }
 }
